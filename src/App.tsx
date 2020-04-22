@@ -1,25 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {CssBaseline} from "@material-ui/core";
+import {MainView} from "./Components/MainView/MainView";
+import {StylesProvider} from '@material-ui/core/styles';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StylesProvider injectFirst={true}>
+        <CssBaseline/>
+        <MainView/>
+    </StylesProvider>
   );
 }
 
